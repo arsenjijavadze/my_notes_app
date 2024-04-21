@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{ note.title }}</title>
+  </head>
+  <body>
+    <form method="post">
+      {{ form.hidden_tag() }}
+      <p>
+        <label>Title:</label>
+        {{ form.title(size=32) }}
+      </p>
+      <p>
+        <label>Content:</label>
+        {{ form.content(cols=32, rows=4) }}
+      </p>
+      <p><input type="submit" value="Update Note"></p>
+  </body>
+</html>

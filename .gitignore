@@ -27,4 +27,5 @@ logs/
 .coverage
 .vscode/
 
-congig.py
+config.py
+instance/site.db

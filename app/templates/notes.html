@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>All Notes</title>
+  </head>
+  <body>
+      <h1>All Notes</h1> 
+    <a href="{{ url_for('main.new_note')}}">Add New Note</a> 
+    <ul>
+      {% for note in notes %}
+      <li>{{ note.title }} - 
+        <a href="{{ url_for('main.view_note', note_id=note.id) }}">View</a>
+        <a href="{{ url_for('main.edit_note', note_id=note.id)}}">Edit</a>
+        <form method="POST" action="{{ url_for('main.delete_note', note_id=note.id) }}">
+          <input type="submit" value="Delete"> 
+        </form>
+      </li>
+      {% endfor %}
+    </ul>
+  </body>
+</html>
