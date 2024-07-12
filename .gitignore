@@ -28,4 +28,5 @@ logs/
 .vscode/
 
 config.py
+instance/
 instance/site.db
