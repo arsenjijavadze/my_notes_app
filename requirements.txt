@@ -1,1 +1,4 @@
-flack
+Flask
+Flask-SQLAlchemy
+Flask-Migrate
+Flask-WTF
